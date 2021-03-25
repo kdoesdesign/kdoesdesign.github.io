@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Stories_Apart_Prototype_01.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Stories_Apart_Prototype_01" startnode="22" creator="Twine" creator-version="2.3.12" ifid="66811001-83AA-43B0-A511-8F9FBF670D69" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.harlowe){
+<tw-storydata name="Stories_Apart_Prototype_01" startnode="1" creator="Twine" creator-version="2.3.12" ifid="66811001-83AA-43B0-A511-8F9FBF670D69" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.harlowe){
 	window.harlowe = {"State": State};
 }</script><tw-passagedata pid="1" name="index" tags="" position="700,400" size="200,200">
 
@@ -74,7 +74,7 @@ Would you feel comfortable sharing your response to this prompt on a //private//
 (if:visits &gt; 15)[&#39;&#39;thank you so much for your time! :))&#39;&#39;]
 (set: $visits to it + 1)
 
-(if:visits &gt; 5)[[[DONE-&gt;followup]]]
+(if:visits &gt; 5)[[[DONE-&gt;datasend]]]
 ^^//
 (if:$visit_00 &lt; 1)[[[share something that inspired you to grow, change, discover yourself-&gt;00]]]
 (if:$visit_01 &lt; 1)[[[share an experience that made you feel unseen, stigmatized, marginalized-&gt;01]]]
@@ -93,7 +93,9 @@ Would you feel comfortable sharing your response to this prompt on a //private//
 (if:$visit_14 &lt; 1)[[[share a piece of information that changed your beliefs, opinions, worldview-&gt;14]]]
 (if:$visit_15 &lt; 1)[[[share something that you love about yourself-&gt;15]]]
 
-//^^</tw-passagedata><tw-passagedata pid="4" name="01" tags="" position="1100,600" size="100,100">prompt: &#39;&#39;//share an experience that made you feel unseen, stigmatized, marginalized//&#39;&#39;
+//^^
+(set: $timestamp to (current-time:))
+(set: $date to (current-date:))</tw-passagedata><tw-passagedata pid="4" name="01" tags="" position="1100,600" size="100,100">prompt: &#39;&#39;//share an experience that made you feel unseen, stigmatized, marginalized//&#39;&#39;
 
 (set: $visit_01 to $visits)
 (b4r:&quot;solid&quot;)+(b4r-colour:white)[=
@@ -468,7 +470,7 @@ Would you feel comfortable sharing your response to this prompt on a //private//
 
 
 [[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="19" name="followup" tags="" position="700,1000" size="200,100">{(b4r:&quot;solid&quot;)+(b4r-colour:white)|output&gt;[
+#</tw-passagedata><tw-passagedata pid="19" name="followup" tags="" position="1653,420" size="200,100">{(b4r:&quot;solid&quot;)+(b4r-colour:white)|output&gt;[
 (if:$visit_00 &gt; 0)[
 // 00: (print: $visit_00) (print: $00a + &quot;/&quot; + $00b + &quot;/&quot; + $00c + &quot;/&quot; + $00d)
 ]
@@ -605,6 +607,103 @@ var sendData = JSON.stringify({
  
 $.ajax({
 url:&quot;https://script.google.com/macros/s/AKfycby6hAz9DotUBkacaefD2l1t11PCqZUgTUS_ajiF0Fj6bz8Xex8/exec&quot;,
+method:&quot;POST&quot;,
+dataType: &quot;json&quot;,
+data: sendData
+}).done(function() {});
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="24" name="datasend" tags="" position="700,920" size="200,100">
+
+
+(text-rotate-z:320)+(text-style:&quot;shudder&quot;)[your data is being sent into space]
+&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
+&lt;script&gt;
+var sendData = JSON.stringify({
+&quot;timestamp&quot;: harlowe.State.variables[&#39;timestamp&#39;],
+&quot;date&quot;: harlowe.State.variables[&#39;date&#39;],
+&quot;visit_00&quot;: harlowe.State.variables[&#39;visit_00&#39;],
+&quot;00a&quot;: harlowe.State.variables[&#39;00a&#39;],
+&quot;00b&quot;: harlowe.State.variables[&#39;00b&#39;],
+&quot;00c&quot;: harlowe.State.variables[&#39;00c&#39;],
+&quot;00d&quot;: harlowe.State.variables[&#39;00d&#39;],
+&quot;visit_01&quot;: harlowe.State.variables[&#39;visit_01&#39;],
+&quot;01a&quot;: harlowe.State.variables[&#39;01a&#39;],
+&quot;01b&quot;: harlowe.State.variables[&#39;01b&#39;],
+&quot;01c&quot;: harlowe.State.variables[&#39;01c&#39;],
+&quot;01d&quot;: harlowe.State.variables[&#39;01d&#39;],
+&quot;visit_02&quot;: harlowe.State.variables[&#39;visit_02&#39;],
+&quot;02a&quot;: harlowe.State.variables[&#39;02a&#39;],
+&quot;02b&quot;: harlowe.State.variables[&#39;02b&#39;],
+&quot;02c&quot;: harlowe.State.variables[&#39;02c&#39;],
+&quot;02d&quot;: harlowe.State.variables[&#39;02d&#39;],
+&quot;visit_03&quot;: harlowe.State.variables[&#39;visit_03&#39;],
+&quot;03a&quot;: harlowe.State.variables[&#39;03a&#39;],
+&quot;03b&quot;: harlowe.State.variables[&#39;03b&#39;],
+&quot;03c&quot;: harlowe.State.variables[&#39;03c&#39;],
+&quot;03d&quot;: harlowe.State.variables[&#39;03d&#39;],
+&quot;visit_04&quot;: harlowe.State.variables[&#39;visit_04&#39;],
+&quot;04a&quot;: harlowe.State.variables[&#39;04a&#39;],
+&quot;04b&quot;: harlowe.State.variables[&#39;04b&#39;],
+&quot;04c&quot;: harlowe.State.variables[&#39;04c&#39;],
+&quot;04d&quot;: harlowe.State.variables[&#39;04d&#39;],
+&quot;visit_05&quot;: harlowe.State.variables[&#39;visit_05&#39;],
+&quot;05a&quot;: harlowe.State.variables[&#39;05a&#39;],
+&quot;05b&quot;: harlowe.State.variables[&#39;05b&#39;],
+&quot;05c&quot;: harlowe.State.variables[&#39;05c&#39;],
+&quot;05d&quot;: harlowe.State.variables[&#39;05d&#39;],
+&quot;visit_06&quot;: harlowe.State.variables[&#39;visit_06&#39;],
+&quot;06a&quot;: harlowe.State.variables[&#39;06a&#39;],
+&quot;06b&quot;: harlowe.State.variables[&#39;06b&#39;],
+&quot;06c&quot;: harlowe.State.variables[&#39;06c&#39;],
+&quot;06d&quot;: harlowe.State.variables[&#39;06d&#39;],
+&quot;visit_07&quot;: harlowe.State.variables[&#39;visit_07&#39;],
+&quot;07a&quot;: harlowe.State.variables[&#39;07a&#39;],
+&quot;07b&quot;: harlowe.State.variables[&#39;07b&#39;],
+&quot;07c&quot;: harlowe.State.variables[&#39;07c&#39;],
+&quot;07d&quot;: harlowe.State.variables[&#39;07d&#39;],
+&quot;visit_08&quot;: harlowe.State.variables[&#39;visit_08&#39;],
+&quot;08a&quot;: harlowe.State.variables[&#39;08a&#39;],
+&quot;08b&quot;: harlowe.State.variables[&#39;08b&#39;],
+&quot;08c&quot;: harlowe.State.variables[&#39;08c&#39;],
+&quot;08d&quot;: harlowe.State.variables[&#39;08d&#39;],
+&quot;visit_09&quot;: harlowe.State.variables[&#39;visit_09&#39;],
+&quot;09a&quot;: harlowe.State.variables[&#39;09a&#39;],
+&quot;09b&quot;: harlowe.State.variables[&#39;09b&#39;],
+&quot;09c&quot;: harlowe.State.variables[&#39;09c&#39;],
+&quot;09d&quot;: harlowe.State.variables[&#39;09d&#39;],
+&quot;visit_10&quot;: harlowe.State.variables[&#39;visit_10&#39;],
+&quot;10a&quot;: harlowe.State.variables[&#39;10a&#39;],
+&quot;10b&quot;: harlowe.State.variables[&#39;10b&#39;],
+&quot;10c&quot;: harlowe.State.variables[&#39;10c&#39;],
+&quot;10d&quot;: harlowe.State.variables[&#39;10d&#39;],
+&quot;visit_11&quot;: harlowe.State.variables[&#39;visit_11&#39;],
+&quot;11a&quot;: harlowe.State.variables[&#39;11a&#39;],
+&quot;11b&quot;: harlowe.State.variables[&#39;11b&#39;],
+&quot;11c&quot;: harlowe.State.variables[&#39;11c&#39;],
+&quot;11d&quot;: harlowe.State.variables[&#39;11d&#39;],
+&quot;visit_12&quot;: harlowe.State.variables[&#39;visit_12&#39;],
+&quot;12a&quot;: harlowe.State.variables[&#39;12a&#39;],
+&quot;12b&quot;: harlowe.State.variables[&#39;12b&#39;],
+&quot;12c&quot;: harlowe.State.variables[&#39;12c&#39;],
+&quot;12d&quot;: harlowe.State.variables[&#39;12d&#39;],
+&quot;visit_13&quot;: harlowe.State.variables[&#39;visit_13&#39;],
+&quot;13a&quot;: harlowe.State.variables[&#39;13a&#39;],
+&quot;13b&quot;: harlowe.State.variables[&#39;13b&#39;],
+&quot;13c&quot;: harlowe.State.variables[&#39;13c&#39;],
+&quot;13d&quot;: harlowe.State.variables[&#39;13d&#39;],
+&quot;visit_14&quot;: harlowe.State.variables[&#39;visit_14&#39;],
+&quot;14a&quot;: harlowe.State.variables[&#39;14a&#39;],
+&quot;14b&quot;: harlowe.State.variables[&#39;14b&#39;],
+&quot;14c&quot;: harlowe.State.variables[&#39;14c&#39;],
+&quot;14d&quot;: harlowe.State.variables[&#39;14d&#39;],
+&quot;visit_15&quot;: harlowe.State.variables[&#39;visit_15&#39;],
+&quot;15a&quot;: harlowe.State.variables[&#39;15a&#39;],
+&quot;15b&quot;: harlowe.State.variables[&#39;15b&#39;],
+&quot;15c&quot;: harlowe.State.variables[&#39;15c&#39;],
+&quot;15d&quot;: harlowe.State.variables[&#39;15d&#39;]
+});
+ 
+$.ajax({
+url:&quot;https://script.google.com/macros/s/AKfycbxBGwlEapyxp6fBTVLn_OTey9J5TmoZ2jdwVGAvqUXpR9341RDgkczHQe31aBejLTY/exec&quot;,
 method:&quot;POST&quot;,
 dataType: &quot;json&quot;,
 data: sendData
