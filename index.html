@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Stories_Apart_Prototype_01</title>
+<title>Stories_Apart_Prototype_02</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" title="' attr(title) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(title) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Stories_Apart_Prototype_01.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Stories_Apart_Prototype_01" startnode="1" creator="Twine" creator-version="2.3.12" ifid="66811001-83AA-43B0-A511-8F9FBF670D69" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-@font-face {
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Stories_Apart_Prototype_02.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Stories_Apart_Prototype_02" startnode="1" creator="Twine" creator-version="2.3.12" ifid="DA6D4192-4F3C-43DD-BE55-307685C53E02" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
   font-family:"Happy Times at the IKOB New Game Plus Edition";
   src: url("/Fonts/happy-times-NG_regular_master_web.ttf") format("truetype");
   font-weight: normal;
@@ -33,7 +32,7 @@
 
 tw-passage {
   font-family: "Happy Times at the IKOB New Game Plus Edition", Times, serif;
-  color: #ffffee;
+  color: #DEE5CF;
   font-size: 16pt;
 }
 
@@ -87,95 +86,114 @@ tw-sidebar{
 	visibility: hidden
 }
 
+tw-enchantment {
+  color: #ffffff ;
+}
+
 tw-story {
 	background-image: url('/Images/starbg.jpg');
 	background-size: cover;
-}
-
-tw-enchantment {
-  color: #ffffff ;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.harlowe){
 	window.harlowe = {"State": State};
 }</script><tw-passagedata pid="1" name="index" tags="" position="700,400" size="200,200">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-down&quot;)+(t8n-time:2s)(click-goto:?page,&quot;intro_1&quot;)
 |=
-&lt;img src=&quot;/Images/starburst.gif&quot; width=&quot;100%&quot; max-height=&quot;150px&quot; !important&gt;
+&lt;img src=&quot;/Images/starburst.gif&quot; width=&quot;100%&quot; max-width=&quot;150px&quot;&gt;
 |||==
 {
-#//welcome, friend!//
+&lt;img src=&quot;/Images/logotype.png&quot; width=&quot;100%&quot; max-width=&quot;1080px&quot;&gt;
 ---
-^^STORIES&amp;nbsp;APART&amp;nbsp;→ PROTOTYPE&amp;nbsp;PHASE&amp;nbsp;1^^
+^^STORIES&amp;nbsp;APART&amp;nbsp;→ PROTOTYPE&amp;nbsp;PHASE&amp;nbsp;2^^
 }
 (after:5s)[=
 (text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]
-|==|</tw-passagedata><tw-passagedata pid="2" name="00" tags="" position="1000,700" size="100,100">prompt: &#39;&#39;//share something that inspired you to grow, change, discover yourself//&#39;&#39;
-
-(set: $visit_00 to $visits)
-(b4r:&quot;solid&quot;)+(b4r-colour:white)[=
-(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX====&quot;)[=
-Would you choose this prompt from a list?
-^^1 = not likely at all / 5 = very likely^^
-(dropdown: bind $00a,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Do you think you might have an interesting story to share in response to this prompt?
-^^1 = i wouldn&#39;t have much to say / 5 = i could go on and on!^^
-(dropdown: bind $00b,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //public// campfire?
-(anyone can listen)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $00c,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //private// campfire?
-(invite-only)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $00d,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
+|==|</tw-passagedata><tw-passagedata pid="2" name="00" tags="" position="1000,700" size="100,100">|=
+(t8n: &quot;flicker&quot;)+(t8n-time:3s)[&lt;img src=&quot;/Images/fire.png&quot; width=&quot;100%&quot; max-width=&quot;150px&quot;&gt;]
+||||=
+#{(t8n: &quot;fade-left&quot;)[//share something that inspired you to grow, change, discover yourself//]}
+|==|
 
 
-[[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">{(if:visits is 1)[&#39;&#39;choose a prompt to continue. &#39;&#39;] &lt;br&gt;
-(if:visits &gt; 1)[&#39;&#39;choose another prompt. ($visits / 16)&#39;&#39;]&lt;br&gt;
-(if:visits &gt; 2)[&#39;&#39;don&#39;t worry, you won&#39;t have to respond to every prompt! 
-(text-style:&quot;wavy-underline&quot;)[respond to at least 5 prompts to continue.] &#39;&#39;]&lt;br&gt;
-(if:visits &gt; 3)[&#39;&#39;but if you have some time to spare, i would appreciate your feedback on as many prompts as possible :) &#39;&#39;]&lt;br&gt;
-(if:visits &gt; 16)[&#39;&#39;wow, you responded to all of them! thank you so much for going above and beyond ❤&#39;&#39;]&lt;br&gt;
-(set: $visits to it + 1)
-(text-style:&quot;sway&quot;)[(if:visits &gt; 5)[(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[DONE →-&gt;postsubmit]]]]
-}
+(after:6s)[=
+(dialog: bind $storytype, &quot;Would you like to share your story through &#39;&#39;spoken word&#39;&#39; (audio) or &#39;&#39;writing&#39;&#39; (text)?&quot;, &quot;AUDIO&quot;,&quot;TEXT&quot;,&quot;Actually, I want to pick a different prompt&quot;)
+(more:)[=
+---
+
+{
+(set: $prompt to &quot;share something that inspired you to grow, change, discover yourself&quot;)
+
+
+(if:$storytype is &quot;AUDIO&quot;)[
+this is an audio recorder
+&lt;iframe allow=&quot;camera; microphone&quot; style=&quot;height: 600px !important; width: 100% !important;&quot; src=&quot;https://recorder.speakai.co/iframe/prompt-00-dcd91ee90e7d&quot; frameborder=&quot;0&quot; scrolling=&quot;yes&quot;&gt;&lt;/iframe&gt;
+
+]
+
+
+(if:$storytype is &quot;TEXT&quot;)[
+|||=
+Write your story in the box below. It can be as long or as short as you want, it can be serious or silly, detailled or casual; any way you feel like expressing yourself is valid.
+=|
+(align:&quot;==&gt;&quot;)[
+(live: 1s)[
+(if:$storytext is not 0)[
+SUBMIT →
+]]]
+|==|
+&lt;br&gt;
+(input-box:2bind $storytext,&quot;X&quot;, 15)
+&lt;br&gt;
+Need some good music to get your creative brain cells firing? (link:&quot;Join the Songs Apart collaborative mixtape!&quot;)[&lt;iframe src=&quot;https://open.spotify.com/embed/playlist/0QNvWraVKJLWPBIsdM1LqG&quot; width=&quot;100%&quot; height=&quot;380&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;encrypted-media&quot;&gt;&lt;/iframe&gt;
+^^&#96;*&#96; open the playlist in (link-rerun:&quot;Spotify&quot;)[(open-url: &quot;https://open.spotify.com/playlist/0QNvWraVKJLWPBIsdM1LqG&quot;)] to add your own songs to the mix!^^]
+
+(if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
+(go-to: &quot;prompts&quot;)
+]]}</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">&#39;&#39;choose a prompt to continue.&#39;&#39;
+while you decide, consider:
+{(live: 5s)[
+(t8n: &quot;flicker&quot;)[(either:
+&quot;what kind of story do you feel most excited to share?&quot;,
+&quot;what experiences do you feel most comfortable sharing online?&quot;,
+&quot;what story do you think others would enjoy listening to?&quot;,
+&quot;what narratives do you wish more people were hearing about?&quot;,
+&quot;what experiences might others relate to?&quot;,
+&quot;what aspects of your identity are relevant to your story?&quot;,
+&quot;what is a story that you haven&#39;t been able to share elsewhere?&quot;,
+&quot;what anecdote might improve a stranger&#39;s day?&quot;,
+&quot;what might make others want to respond to your story?&quot;
+)
+]]}
+
 ---
 //
-(if:$visit_00 &lt; 1)[[[→ share something that inspired you to grow, change, discover yourself-&gt;00]]]
+[[→ share something that inspired you to grow, change, discover yourself-&gt;00]]
 
-(if:$visit_01 &lt; 1)[[[→ share an experience that made you feel unseen, stigmatized, marginalized-&gt;01]]]
+[[→ share a moment that made you feel loved, seen, appreciated-&gt;02]]
 
-(if:$visit_02 &lt; 1)[[[→ share a moment that made you feel loved, seen, appreciated-&gt;02]]]
+[[→ share an experience in which you felt afraid, at risk, targeted-&gt;03]]
 
-(if:$visit_03 &lt; 1)[[[→ share an experience in which you felt afraid, in danger-&gt;03]]]
+[[→ share a pleasant, funny memory that you love to recall-&gt;04]]
 
-(if:$visit_04 &lt; 1)[[[→ share a pleasant, funny memory that you love to recall-&gt;04]]]
+[[→ share a dream that you can remember vividly-&gt;07]]
 
-(if:$visit_05 &lt; 1)[[[→ share an obstacle or hardship you have overcome-&gt;05]]]
+[[→ share a hobby, activity, fandom, interest that you are passionate about-&gt;08]]
 
-(if:$visit_06 &lt; 1)[[[→ share a good story that someone else has shared with you-&gt;06]]]
+[[→ share your experience with a community where you feel a sense of belonging-&gt;09]]
 
-(if:$visit_07 &lt; 1)[[[→ share a dream that you can remember vividly-&gt;07]]]
+[[→ share an awkward memory that still makes you cringe (but maybe is funny in hindsight)-&gt;10]]
 
-(if:$visit_08 &lt; 1)[[[→ share a hobby, activity, fandom, interest that you are passionate about-&gt;08]]]
+[[→ share something that you wish others understood about you, or something that has made you feel unseen, marginalized-&gt;11]]
 
-(if:$visit_09 &lt; 1)[[[→ share your experience with a community where you feel a sense of belonging-&gt;09]]]
+[[→ share an accomplishment, creation, or goal that you are proud of, or a hardship that you have overcome-&gt;12]]
 
-(if:$visit_10 &lt; 1)[[[→ share an awkward, embarrassing memory that still makes you cringe sometimes-&gt;10]]]
+[[→ share a description of the place you grew up in-&gt;13]]
 
-(if:$visit_11 &lt; 1)[[[→ share something about yourself that not many people know-&gt;11]]]
+[[→ share a piece of information that changed your beliefs, opinions, worldview-&gt;14]]
 
-(if:$visit_12 &lt; 1)[[[→ share an accomplishment, creation, or goal that you are proud of-&gt;12]]]
-
-(if:$visit_13 &lt; 1)[[[→ share a description of the place you grew up in-&gt;13]]]
-
-(if:$visit_14 &lt; 1)[[[→ share a piece of information that changed your beliefs, opinions, worldview-&gt;14]]]
-
-(if:$visit_15 &lt; 1)[[[→ share something that you love about yourself-&gt;15]]]
+[[→ share something that you love about yourself-&gt;15]]
 
 
+
+&#96;*&#96; in response to your feedback from prototype 01, Stories Apart will also include creative prompts about hypothetical situations! in order to make space for serious personal storytelling, these prompts will be a separate option that a campfire moderator can choose to enable. for this prototype campfire, only the personal prompts are available.
 //
 (set: $timestamp to (current-time:))
 (set: $date to (current-date:))</tw-passagedata><tw-passagedata pid="4" name="01" tags="" position="1100,700" size="100,100">prompt: &#39;&#39;//share an experience that made you feel unseen, stigmatized, marginalized//&#39;&#39;
@@ -983,12 +1001,13 @@ Do you have any concerns about how other users might use the site? Do you feel t
 
 (text-style:&quot;sway&quot;)[[[SUBMIT →-&gt;postpostsubmit]]]</tw-passagedata><tw-passagedata pid="27" name="intro_1" tags="" position="1000,400" size="100,200">||===
 &#39;&#39;WHAT IS THIS?&#39;&#39;
-//Stories Apart// is a space for (text-style:&quot;wavy-underline&quot;)[digital oral storytelling] that encourages personal expression. It aims to bring the intimate experience of communal storytelling to the web, fostering meaningful interactions in a safe, anonymous, chosen community of storytellers.
-(after:2.1s)[=
+Everyone has a story that deserves to be heard!
+
+//Stories Apart// is a space for (text-style:&quot;wavy-underline&quot;)[digital oral storytelling] that encourages personal expression. It aims to bring the intimate experience of communal storytelling to the web, fostering meaningful interactions in a safe, anonymous, chosen community of storytellers.(after:2.1s)[=
 (click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
 This platform will allow users to create (text-style:&quot;wavy-underline&quot;)[campfires] for sharing stories in text or audio format. These campfires may be (text-style:&quot;wavy-underline&quot;)[public] (open to anyone) or (text-style:&quot;wavy-underline&quot;)[private] (invite-only), allowing users to either foster inclusive spaces for anyone, or a safe space for a select group.
 (click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-Currently, //Stories Apart// is just a concept. With your help, I hope to pitch this project to a developer so that this concept can become a reality! This pitch will involve a (text-style:&quot;wavy-underline&quot;)[functional prototype] as well as a (text-style:&quot;wavy-underline&quot;)[visual demo] of the site design, using real people&#39;s stories collected during the prototype phase.
+Currently, //Stories Apart// is just a concept. With your help, I hope to pitch this project to a developer so that this concept can become a reality! This pitch will involve a (text-style:&quot;wavy-underline&quot;)[functional prototype], a (text-style:&quot;wavy-underline&quot;)[visual mockup] of the site design, and an (text-style:&quot;wavy-underline&quot;)[archive of stories] collected during this prototype phase.
 
 (text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[&#39;&#39;HERE&#39;S WHERE YOU COME IN →&#39;&#39;-&gt;intro_2]]
 
@@ -996,17 +1015,23 @@ Currently, //Stories Apart// is just a concept. With your help, I hope to pitch 
 (after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
 |==|</tw-passagedata><tw-passagedata pid="28" name="intro_2" tags="" position="1200,400" size="100,200">||===
 &#39;&#39;WHAT IS EXPECTED OF ME?&#39;&#39;
-If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 01 Prototype]!
+If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 02 Prototype]!
 
-In this phase, you will //not// be expected to share a story, or any personal information.
+In this phase, you will be asked to share a story in response to a prompt of your choice! Your story will be added to the //Stories Apart// archive: a proof-of-concept showing how a single campfire can grow, and what kind of stories people would share on this platform.
 (after:2.1s)[=
 (click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-If you choose to participate, you will be given a series of story prompts. Your task is to (text-style:&quot;wavy-underline&quot;)[rate each prompt], based on the likelihood that you would share a story in response to the prompt.
+Your story may be recorded in text or audio format. Your submission will be anonymous, and you will not be required to share your name or any personal information!
+
+However, please note that your submission will be publicly accessible by visitors of the //Stories Apart// archive. &#39;&#39;By participating, you are consenting to have the contents of your story stored on a database and shared online.&#39;&#39;
 
 (click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-There will be an //optional// set of questions at the end of this survey: this will ask for basic demographic information. There will also be a free space to share ideas and feedback. Again, this information will //not// be required to participate in this phase of the prototype, and your answers will be confidential.
-
+There will be an //optional// set of questions at the end of this prototype: this will ask for basic demographic information. There will also be a free space to share ideas and feedback. Again, this information will //not// be required to participate in this phase of the prototype, and your answers will be not be tracable to the story you submit.
+(set: $consent to false)
+(checkbox: 2bind $consent,&quot; I understand and wish to continue&quot;)
+{(live: 0.5s)[
+(if:$consent is true)[
 &#39;&#39;(text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[LET&#39;S GO! →-&gt;prompts]]&#39;&#39;
+]]}
 
 
 |=
