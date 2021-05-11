@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Stories_Apart_Prototype_02.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Stories_Apart_Prototype_02" startnode="1" creator="Twine" creator-version="2.3.12" ifid="DA6D4192-4F3C-43DD-BE55-307685C53E02" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
+<tw-storydata name="Stories_Apart_Prototype_02" startnode="21" creator="Twine" creator-version="2.3.12" ifid="DA6D4192-4F3C-43DD-BE55-307685C53E02" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
   font-family:"Happy Times at the IKOB New Game Plus Edition";
   src: url("/Fonts/happy-times-NG_regular_master_web.ttf") format("truetype");
   font-weight: normal;
@@ -97,57 +97,67 @@ tw-story {
 	window.harlowe = {"State": State};
 }</script><tw-passagedata pid="1" name="index" tags="" position="700,400" size="200,200">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-down&quot;)+(t8n-time:2s)(click-goto:?page,&quot;intro_1&quot;)
 |=
-&lt;img src=&quot;/Images/starburst.gif&quot; width=&quot;100%&quot; max-width=&quot;150px&quot;&gt;
+&lt;img src=&quot;/Images/starburst.gif&quot; width=&quot;75%&quot;&gt;
 |||==
 {
-&lt;img src=&quot;/Images/logotype.png&quot; width=&quot;100%&quot; max-width=&quot;1080px&quot;&gt;
+&lt;img src=&quot;/Images/logotype.png&quot; width=&quot;100%&quot; max-width=&quot;400px&quot;&gt;
 ---
 ^^STORIES&amp;nbsp;APART&amp;nbsp;→ PROTOTYPE&amp;nbsp;PHASE&amp;nbsp;2^^
 }
 (after:5s)[=
 (text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]
-|==|</tw-passagedata><tw-passagedata pid="2" name="00" tags="" position="1000,700" size="100,100">|=
+|==|</tw-passagedata><tw-passagedata pid="2" name="00" tags="" position="1000,700" size="100,100">{(set: $prompt to &quot;share something that inspired you to grow, change, discover yourself&quot;)
+
+}
+|=
 (t8n: &quot;flicker&quot;)+(t8n-time:3s)[&lt;img src=&quot;/Images/fire.png&quot; width=&quot;100%&quot; max-width=&quot;150px&quot;&gt;]
 ||||=
-#{(t8n: &quot;fade-left&quot;)[//share something that inspired you to grow, change, discover yourself//]}
+#{(t8n: &quot;fade-left&quot;)[//(print: $prompt)//]}
 |==|
 
 
-(after:6s)[=
+(after:5s)[=
 (dialog: bind $storytype, &quot;Would you like to share your story through &#39;&#39;spoken word&#39;&#39; (audio) or &#39;&#39;writing&#39;&#39; (text)?&quot;, &quot;AUDIO&quot;,&quot;TEXT&quot;,&quot;Actually, I want to pick a different prompt&quot;)
 (more:)[=
 ---
 
 {
-(set: $prompt to &quot;share something that inspired you to grow, change, discover yourself&quot;)
-
-
 (if:$storytype is &quot;AUDIO&quot;)[
-this is an audio recorder
-&lt;iframe allow=&quot;camera; microphone&quot; style=&quot;height: 600px !important; width: 100% !important;&quot; src=&quot;https://recorder.speakai.co/iframe/prompt-00-dcd91ee90e7d&quot; frameborder=&quot;0&quot; scrolling=&quot;yes&quot;&gt;&lt;/iframe&gt;
+Tell your story using the recorder below. Find a comfortable place to sit, get yourself something to drink, speak as if you are in the company of good friends!
+&lt;br&gt;&lt;br&gt;
+(text-style:&quot;wavy-underline&quot;)[Enter the name of your story in the &#39;Name&#39; box]— you are not required to share your own name!
+&lt;br&gt;&lt;br&gt;
+Your audio will be processed through a third party service: Speak Ai.
+(link:&quot;Click here to read more details / instructions about using this service ↓&quot;)[You will be required to (text-style:&quot;wavy-underline&quot;)[allow access to your microphone]. On certain devices / browsers, you may be prompted to allow access to your camera as well. If this happens, &#39;&#39;rest assured that the recorder cannot capture video&#39;&#39;! I spoke with the development team at Speak.ai, and they kindly disabled the video recording function for this embedded recorder.
+&lt;br&gt;&lt;br&gt;
+You will be limited to recording (text-style:&quot;wavy-underline&quot;)[5 minutes] at a time. If your story is longer, simply submit your recording, and start a new recording with the same name.
+&lt;br&gt;&lt;br&gt;
+Visit (link:&quot;speakai.co&quot;)[(open-url: &quot;https://speakai.co/team/&quot;)] for more information.
+]
+&lt;br&gt;
+&lt;iframe allow=&quot;camera; microphone&quot; style=&quot;height: 480px !important; width: 100% !important; filter: invert() hue-rotate(-44deg);&quot; src=&quot;https://recorder.speakai.co/iframe/prompt-00-dcd91ee90e7d&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
 
 ]
 
 
 (if:$storytype is &quot;TEXT&quot;)[
 |||=
-Write your story in the box below. It can be as long or as short as you want, it can be serious or silly, detailled or casual; any way you feel like expressing yourself is valid.
+Write your story in the box below. It can be long or short, serious or fun, poetic or casual; any way you feel like expressing yourself is valid!
 =|
-(align:&quot;==&gt;&quot;)[
-(live: 1s)[
+(live: 10s)[
 (if:$storytext is not 0)[
-SUBMIT →
+(align:&quot;==&gt;&quot;)[SUBMIT →
 ]]]
 |==|
 &lt;br&gt;
 (input-box:2bind $storytext,&quot;X&quot;, 15)
 &lt;br&gt;
 Need some good music to get your creative brain cells firing? (link:&quot;Join the Songs Apart collaborative mixtape!&quot;)[&lt;iframe src=&quot;https://open.spotify.com/embed/playlist/0QNvWraVKJLWPBIsdM1LqG&quot; width=&quot;100%&quot; height=&quot;380&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;encrypted-media&quot;&gt;&lt;/iframe&gt;
-^^&#96;*&#96; open the playlist in (link-rerun:&quot;Spotify&quot;)[(open-url: &quot;https://open.spotify.com/playlist/0QNvWraVKJLWPBIsdM1LqG&quot;)] to add your own songs to the mix!^^]
+^^&#96;*&#96; open the playlist in (link-rerun:&quot;Spotify&quot;)[(open-url: &quot;https://open.spotify.com/playlist/0QNvWraVKJLWPBIsdM1LqG&quot;)] to add your own songs to the mix!^^]]
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]]}</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">&#39;&#39;choose a prompt to continue.&#39;&#39;
+]}</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">&#39;&#39;choose a prompt to continue.&#39;&#39;
 while you decide, consider:
 {(live: 5s)[
 (t8n: &quot;flicker&quot;)[(either:
@@ -167,29 +177,29 @@ while you decide, consider:
 //
 [[→ share something that inspired you to grow, change, discover yourself-&gt;00]]
 
-[[→ share a moment that made you feel loved, seen, appreciated-&gt;02]]
+[[→ share a moment that made you feel loved, seen, appreciated-&gt;01]]
 
-[[→ share an experience in which you felt afraid, at risk, targeted-&gt;03]]
+[[→ share an experience in which you felt afraid, at risk, targeted-&gt;02]]
 
-[[→ share a pleasant, funny memory that you love to recall-&gt;04]]
+[[→ share a pleasant, funny memory that you love to recall-&gt;03]]
 
-[[→ share a dream that you can remember vividly-&gt;07]]
+[[→ share a dream that you can remember vividly-&gt;04]]
 
-[[→ share a hobby, activity, fandom, interest that you are passionate about-&gt;08]]
+[[→ share a hobby, activity, fandom, interest that you are passionate about-&gt;05]]
 
-[[→ share your experience with a community where you feel a sense of belonging-&gt;09]]
+[[→ share your experience with a community where you feel a sense of belonging-&gt;06]]
 
-[[→ share an awkward memory that still makes you cringe (but maybe is funny in hindsight)-&gt;10]]
+[[→ share an awkward memory that still makes you cringe (but maybe is funny in hindsight)-&gt;07]]
 
-[[→ share something that you wish others understood about you, or something that has made you feel unseen, marginalized-&gt;11]]
+[[→ share something that you wish others understood about you, or something that has made you feel unseen, marginalized-&gt;08]]
 
-[[→ share an accomplishment, creation, or goal that you are proud of, or a hardship that you have overcome-&gt;12]]
+[[→ share an accomplishment, creation, or goal that you are proud of, or a hardship that you have overcome-&gt;09]]
 
-[[→ share a description of the place you grew up in-&gt;13]]
+[[→ share a description of the place you grew up in-&gt;10]]
 
-[[→ share a piece of information that changed your beliefs, opinions, worldview-&gt;14]]
+[[→ share a piece of information that changed your beliefs, opinions, worldview-&gt;11]]
 
-[[→ share something that you love about yourself-&gt;15]]
+[[→ share something that you love about yourself-&gt;12]]
 
 
 
@@ -471,7 +481,7 @@ Would you feel comfortable sharing your response to this prompt on a //private//
 
 
 [[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="15" name="12" tags="" position="1000,1000" size="100,100">prompt: &#39;&#39;//share an accomplishment, creation, or goal that you are proud of//&#39;&#39;
+#</tw-passagedata><tw-passagedata pid="15" name="12" tags="" position="1400,900" size="100,100">prompt: &#39;&#39;//share an accomplishment, creation, or goal that you are proud of//&#39;&#39;
 
 (set: $visit_12 to $visits)
 (b4r:&quot;solid&quot;)+(b4r-colour:white)[=
@@ -496,320 +506,7 @@ Would you feel comfortable sharing your response to this prompt on a //private//
 
 
 [[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="16" name="13" tags="" position="1100,1000" size="100,100">prompt: &#39;&#39;//share a description of the place you grew up in//&#39;&#39;
-
-(set: $visit_13 to $visits)
-(b4r:&quot;solid&quot;)+(b4r-colour:white)[=
-(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX====&quot;)[=
-Would you choose this prompt from a list?
-^^1 = not likely at all / 5 = very likely^^
-(dropdown: bind $13a,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Do you think you might have an interesting story to share in response to this prompt?
-^^1 = i wouldn&#39;t have much to say / 5 = i could go on and on!^^
-(dropdown: bind $13b,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //public// campfire?
-(anyone can listen)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $13c,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //private// campfire?
-(invite-only)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $13d,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-
-[[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="17" name="14" tags="" position="1200,1000" size="100,100">prompt: &#39;&#39;//share a piece of information that changed your beliefs, opinions, worldview//&#39;&#39;
-
-(set: $visit_14 to $visits)
-(b4r:&quot;solid&quot;)+(b4r-colour:white)[=
-(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX====&quot;)[=
-Would you choose this prompt from a list?
-^^1 = not likely at all / 5 = very likely^^
-(dropdown: bind $14a,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Do you think you might have an interesting story to share in response to this prompt?
-^^1 = i wouldn&#39;t have much to say / 5 = i could go on and on!^^
-(dropdown: bind $14b,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //public// campfire?
-(anyone can listen)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $14c,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //private// campfire?
-(invite-only)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $14d,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-
-[[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="18" name="15" tags="" position="1300,1000" size="100,100">prompt: &#39;&#39;//share something that you love about yourself//&#39;&#39;
-
-(set: $visit_15 to $visits)
-(b4r:&quot;solid&quot;)+(b4r-colour:white)[=
-(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX====&quot;)[=
-Would you choose this prompt from a list?
-^^1 = not likely at all / 5 = very likely^^
-(dropdown: bind $15a,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Do you think you might have an interesting story to share in response to this prompt?
-^^1 = i wouldn&#39;t have much to say / 5 = i could go on and on!^^
-(dropdown: bind $15b,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //public// campfire?
-(anyone can listen)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $15c,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-Would you feel comfortable sharing your response to this prompt on a //private// campfire?
-(invite-only)
-^^1 = i would not be comfortable with that / 5 = i would have no problem with that^^
-(dropdown: bind $15d,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
-
-
-[[DONE ↩-&gt;prompts]]
-#</tw-passagedata><tw-passagedata pid="19" name="followup" tags="" position="1653,420" size="200,100">{(b4r:&quot;solid&quot;)+(b4r-colour:white)|output&gt;[
-(if:$visit_00 &gt; 0)[
-// 00: (print: $visit_00) (print: $00a + &quot;/&quot; + $00b + &quot;/&quot; + $00c + &quot;/&quot; + $00d)
-]
-(if:$visit_01 &gt; 0)[
-// 01: (print: $visit_01) (print: $01a + &quot;/&quot; + $01b + &quot;/&quot; + $01c + &quot;/&quot; + $01d)
-]
-(if:$visit_02 &gt; 0)[
-// 02: (print: $visit_02) (print: $02a + &quot;/&quot; + $02b + &quot;/&quot; + $02c + &quot;/&quot; + $02d)
-]
-(if:$visit_03 &gt; 0)[
-// 03: (print: $visit_03) (print: $03a + &quot;/&quot; + $03b + &quot;/&quot; + $03c + &quot;/&quot; + $03d)
-]
-(if:$visit_04 &gt; 0)[
-// 04: (print: $visit_04) (print: $04a + &quot;/&quot; + $04b + &quot;/&quot; + $04c + &quot;/&quot; + $04d)
-]
-(if:$visit_05 &gt; 0)[
-// 05: (print: $visit_05) (print: $05a + &quot;/&quot; + $05b + &quot;/&quot; + $05c + &quot;/&quot; + $05d)
-]
-(if:$visit_06 &gt; 0)[
-// 06: (print: $visit_06) (print: $06a + &quot;/&quot; + $06b + &quot;/&quot; + $06c + &quot;/&quot; + $06d)
-]
-(if:$visit_07 &gt; 0)[
-// 07: (print: $visit_07) (print: $07a + &quot;/&quot; + $07b + &quot;/&quot; + $07c + &quot;/&quot; + $07d)
-]
-(if:$visit_08 &gt; 0)[
-// 08: (print: $visit_08) (print: $08a + &quot;/&quot; + $08b + &quot;/&quot; + $08c + &quot;/&quot; + $08d)
-]
-(if:$visit_09 &gt; 0)[
-// 09: (print: $visit_09) (print: $09a + &quot;/&quot; + $09b + &quot;/&quot; + $09c + &quot;/&quot; + $09d)
-]
-(if:$visit_10 &gt; 0)[
-// 10: (print: $visit_10) (print: $10a + &quot;/&quot; + $10b + &quot;/&quot; + $10c + &quot;/&quot; + $10d)
-]
-(if:$visit_11 &gt; 0)[
-// 11: (print: $visit_11) (print: $11a + &quot;/&quot; + $11b + &quot;/&quot; + $11c + &quot;/&quot; + $11d)
-]
-(if:$visit_12 &gt; 0)[
-// 12: (print: $visit_12) (print: $12a + &quot;/&quot; + $12b + &quot;/&quot; + $12c + &quot;/&quot; + $12d)
-]
-(if:$visit_13 &gt; 0)[
-// 13: (print: $visit_13) (print: $13a + &quot;/&quot; + $13b + &quot;/&quot; + $13c + &quot;/&quot; + $13d)
-]
-(if:$visit_14 &gt; 0)[
-// 14: (print: $visit_14) (print: $14a + &quot;/&quot; + $14b + &quot;/&quot; + $14c + &quot;/&quot; + $14d)
-]
-(if:$visit_15 &gt; 0)[
-// 15: (print: $visit_15) (print: $15a + &quot;/&quot; + $15b + &quot;/&quot; + $15c + &quot;/&quot; + $15d)
-]
-]}
-</tw-passagedata><tw-passagedata pid="20" name="Untitled Passage" tags="" position="1550,1025" size="100,100">(b4r:&quot;solid&quot;)+(b4r-colour:white)|output&gt;[
-(print: &quot;prompt 00: &quot; + $visit_00)
-(print: $00a + &quot;,&quot; + $00b + &quot;,&quot; + $00c + &quot;,&quot; + $00d)
-(print: &quot;prompt 01: &quot; + $visit_01)
-(print: $01a + &quot;,&quot; + $01b + &quot;,&quot; + $01c + &quot;,&quot; + $01d)
-(print: &quot;prompt 02: &quot; + $visit_02)
-(print: $02a + &quot;,&quot; + $02b + &quot;,&quot; + $02c + &quot;,&quot; + $02d)
-(print: &quot;prompt 03: &quot; + $visit_03)
-(print: $03a + &quot;,&quot; + $03b + &quot;,&quot; + $03c + &quot;,&quot; + $03d)
-(print: &quot;prompt 04: &quot; + $visit_04)
-(print: $04a + &quot;,&quot; + $04b + &quot;,&quot; + $04c + &quot;,&quot; + $04d)
-(print: &quot;prompt 05: &quot; + $visit_05)
-(print: $05a + &quot;,&quot; + $05b + &quot;,&quot; + $05c + &quot;,&quot; + $05d)
-(print: &quot;prompt 06: &quot; + $visit_06)
-(print: $06a + &quot;,&quot; + $06b + &quot;,&quot; + $06c + &quot;,&quot; + $06d)
-(print: &quot;prompt 07: &quot; + $visit_07)
-(print: $07a + &quot;,&quot; + $07b + &quot;,&quot; + $07c + &quot;,&quot; + $07d)
-(print: &quot;prompt 08: &quot; + $visit_08)
-(print: $08a + &quot;,&quot; + $08b + &quot;,&quot; + $08c + &quot;,&quot; + $08d)
-(print: &quot;prompt 09: &quot; + $visit_09)
-(print: $09a + &quot;,&quot; + $09b + &quot;,&quot; + $09c + &quot;,&quot; + $09d)
-(print: &quot;prompt 10: &quot; + $visit_10)
-(print: $10a + &quot;,&quot; + $10b + &quot;,&quot; + $10c + &quot;,&quot; + $10d)
-(print: &quot;prompt 11: &quot; + $visit_11)
-(print: $11a + &quot;,&quot; + $11b + &quot;,&quot; + $11c + &quot;,&quot; + $11d)
-(print: &quot;prompt 12: &quot; + $visit_12)
-(print: $12a + &quot;,&quot; + $12b + &quot;,&quot; + $12c + &quot;,&quot; + $12d)
-(print: &quot;prompt 13: &quot; + $visit_13)
-(print: $13a + &quot;,&quot; + $13b + &quot;,&quot; + $13c + &quot;,&quot; + $13d)
-(print: &quot;prompt 14: &quot; + $visit_14)
-(print: $14a + &quot;,&quot; + $14b + &quot;,&quot; + $14c + &quot;,&quot; + $14d)
-(print: &quot;prompt 15: &quot; + $visit_15)
-(print: $15a + &quot;,&quot; + $15b + &quot;,&quot; + $15c + &quot;,&quot; + $15d)
-]</tw-passagedata><tw-passagedata pid="21" name="Untitled Passage 1" tags="" position="1525,500" size="100,100">(b4r:&quot;solid&quot;)+(b4r-colour:white)+(align:&quot;&lt;==&quot;)+(box:&quot;==XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=========&quot;)|output&gt;[
-prompt 00: (print: $visit_00)
-(print: $00a + &quot;,&quot; + $00b + &quot;,&quot; + $00c + &quot;,&quot; + $00d)
-(print: &quot;prompt 01: &quot; + $visit_01)
-(print: $01a + &quot;,&quot; + $01b + &quot;,&quot; + $01c + &quot;,&quot; + $01d)
-(print: &quot;prompt 02: &quot; + $visit_02)
-(print: $02a + &quot;,&quot; + $02b + &quot;,&quot; + $02c + &quot;,&quot; + $02d)
-(print: &quot;prompt 03: &quot; + $visit_03)
-(print: $03a + &quot;,&quot; + $03b + &quot;,&quot; + $03c + &quot;,&quot; + $03d)
-(print: &quot;prompt 04: &quot; + $visit_04)
-(print: $04a + &quot;,&quot; + $04b + &quot;,&quot; + $04c + &quot;,&quot; + $04d)
-(print: &quot;prompt 05: &quot; + $visit_05)
-(print: $05a + &quot;,&quot; + $05b + &quot;,&quot; + $05c + &quot;,&quot; + $05d)
-(print: &quot;prompt 06: &quot; + $visit_06)
-(print: $06a + &quot;,&quot; + $06b + &quot;,&quot; + $06c + &quot;,&quot; + $06d)
-(print: &quot;prompt 07: &quot; + $visit_07)
-(print: $07a + &quot;,&quot; + $07b + &quot;,&quot; + $07c + &quot;,&quot; + $07d)
-(print: &quot;prompt 08: &quot; + $visit_08)
-(print: $08a + &quot;,&quot; + $08b + &quot;,&quot; + $08c + &quot;,&quot; + $08d)
-(print: &quot;prompt 09: &quot; + $visit_09)
-(print: $09a + &quot;,&quot; + $09b + &quot;,&quot; + $09c + &quot;,&quot; + $09d)
-(print: &quot;prompt 10: &quot; + $visit_10)
-(print: $10a + &quot;,&quot; + $10b + &quot;,&quot; + $10c + &quot;,&quot; + $10d)
-(print: &quot;prompt 11: &quot; + $visit_11)
-(print: $11a + &quot;,&quot; + $11b + &quot;,&quot; + $11c + &quot;,&quot; + $11d)
-(print: &quot;prompt 12: &quot; + $visit_12)
-(print: $12a + &quot;,&quot; + $12b + &quot;,&quot; + $12c + &quot;,&quot; + $12d)
-(print: &quot;prompt 13: &quot; + $visit_13)
-(print: $13a + &quot;,&quot; + $13b + &quot;,&quot; + $13c + &quot;,&quot; + $13d)
-(print: &quot;prompt 14: &quot; + $visit_14)
-(print: $14a + &quot;,&quot; + $14b + &quot;,&quot; + $14c + &quot;,&quot; + $14d)
-(print: &quot;prompt 15: &quot; + $visit_15)
-(print: $15a + &quot;,&quot; + $15b + &quot;,&quot; + $15c + &quot;,&quot; + $15d)
-]</tw-passagedata><tw-passagedata pid="22" name="sheetstest" tags="" position="1600,600" size="100,200">(input-box:2bind $testvar,&quot;=XX=&quot;,&quot;put some fake data here 🙄&quot;)
-(dropdown: 2bind $testelement,&quot;earth&quot;,&quot;air&quot;,&quot;water&quot;,&quot;fire&quot;,&quot;long ago the four elements lived in harmony&quot;)
-(set: $testtime to (current-time:))
-(set: $testAAA to &quot;it&quot;)
-(set: $testBBB to &quot;just&quot;)
-(set: $testCCC to &quot;works!&quot;)
-
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[[[beam me up!-&gt;sheetstest2]]]</tw-passagedata><tw-passagedata pid="23" name="sheetstest2" tags="" position="1600,850" size="100,100">beep boop
-&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
-&lt;script&gt;
-var sendData = JSON.stringify({
-&quot;testvar&quot;: harlowe.State.variables[&#39;testvar&#39;],
-&quot;testelement&quot;: harlowe.State.variables[&#39;testelement&#39;],
-&quot;testAAA&quot;: harlowe.State.variables[&#39;testAAA&#39;],
-&quot;testBBB&quot;: harlowe.State.variables[&#39;testBBB&#39;],
-&quot;testCCC&quot;: harlowe.State.variables[&#39;testCCC&#39;],
-&quot;testtime&quot;: harlowe.State.variables[&#39;testtime&#39;]
-});
- 
-$.ajax({
-url:&quot;https://script.google.com/macros/s/AKfycby6hAz9DotUBkacaefD2l1t11PCqZUgTUS_ajiF0Fj6bz8Xex8/exec&quot;,
-method:&quot;POST&quot;,
-dataType: &quot;json&quot;,
-data: sendData
-}).done(function() {});
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="24" name="datasend" tags="" position="1700,1000" size="200,100">
-
-
-(text-rotate-z:320)+(text-style:&quot;shudder&quot;)[your data is being sent into space]
-&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
-&lt;script&gt;
-var sendData = JSON.stringify({
-&quot;timestamp&quot;: harlowe.State.variables[&#39;timestamp&#39;],
-&quot;date&quot;: harlowe.State.variables[&#39;date&#39;],
-&quot;visit_00&quot;: harlowe.State.variables[&#39;visit_00&#39;],
-&quot;00a&quot;: harlowe.State.variables[&#39;00a&#39;],
-&quot;00b&quot;: harlowe.State.variables[&#39;00b&#39;],
-&quot;00c&quot;: harlowe.State.variables[&#39;00c&#39;],
-&quot;00d&quot;: harlowe.State.variables[&#39;00d&#39;],
-&quot;visit_01&quot;: harlowe.State.variables[&#39;visit_01&#39;],
-&quot;01a&quot;: harlowe.State.variables[&#39;01a&#39;],
-&quot;01b&quot;: harlowe.State.variables[&#39;01b&#39;],
-&quot;01c&quot;: harlowe.State.variables[&#39;01c&#39;],
-&quot;01d&quot;: harlowe.State.variables[&#39;01d&#39;],
-&quot;visit_02&quot;: harlowe.State.variables[&#39;visit_02&#39;],
-&quot;02a&quot;: harlowe.State.variables[&#39;02a&#39;],
-&quot;02b&quot;: harlowe.State.variables[&#39;02b&#39;],
-&quot;02c&quot;: harlowe.State.variables[&#39;02c&#39;],
-&quot;02d&quot;: harlowe.State.variables[&#39;02d&#39;],
-&quot;visit_03&quot;: harlowe.State.variables[&#39;visit_03&#39;],
-&quot;03a&quot;: harlowe.State.variables[&#39;03a&#39;],
-&quot;03b&quot;: harlowe.State.variables[&#39;03b&#39;],
-&quot;03c&quot;: harlowe.State.variables[&#39;03c&#39;],
-&quot;03d&quot;: harlowe.State.variables[&#39;03d&#39;],
-&quot;visit_04&quot;: harlowe.State.variables[&#39;visit_04&#39;],
-&quot;04a&quot;: harlowe.State.variables[&#39;04a&#39;],
-&quot;04b&quot;: harlowe.State.variables[&#39;04b&#39;],
-&quot;04c&quot;: harlowe.State.variables[&#39;04c&#39;],
-&quot;04d&quot;: harlowe.State.variables[&#39;04d&#39;],
-&quot;visit_05&quot;: harlowe.State.variables[&#39;visit_05&#39;],
-&quot;05a&quot;: harlowe.State.variables[&#39;05a&#39;],
-&quot;05b&quot;: harlowe.State.variables[&#39;05b&#39;],
-&quot;05c&quot;: harlowe.State.variables[&#39;05c&#39;],
-&quot;05d&quot;: harlowe.State.variables[&#39;05d&#39;],
-&quot;visit_06&quot;: harlowe.State.variables[&#39;visit_06&#39;],
-&quot;06a&quot;: harlowe.State.variables[&#39;06a&#39;],
-&quot;06b&quot;: harlowe.State.variables[&#39;06b&#39;],
-&quot;06c&quot;: harlowe.State.variables[&#39;06c&#39;],
-&quot;06d&quot;: harlowe.State.variables[&#39;06d&#39;],
-&quot;visit_07&quot;: harlowe.State.variables[&#39;visit_07&#39;],
-&quot;07a&quot;: harlowe.State.variables[&#39;07a&#39;],
-&quot;07b&quot;: harlowe.State.variables[&#39;07b&#39;],
-&quot;07c&quot;: harlowe.State.variables[&#39;07c&#39;],
-&quot;07d&quot;: harlowe.State.variables[&#39;07d&#39;],
-&quot;visit_08&quot;: harlowe.State.variables[&#39;visit_08&#39;],
-&quot;08a&quot;: harlowe.State.variables[&#39;08a&#39;],
-&quot;08b&quot;: harlowe.State.variables[&#39;08b&#39;],
-&quot;08c&quot;: harlowe.State.variables[&#39;08c&#39;],
-&quot;08d&quot;: harlowe.State.variables[&#39;08d&#39;],
-&quot;visit_09&quot;: harlowe.State.variables[&#39;visit_09&#39;],
-&quot;09a&quot;: harlowe.State.variables[&#39;09a&#39;],
-&quot;09b&quot;: harlowe.State.variables[&#39;09b&#39;],
-&quot;09c&quot;: harlowe.State.variables[&#39;09c&#39;],
-&quot;09d&quot;: harlowe.State.variables[&#39;09d&#39;],
-&quot;visit_10&quot;: harlowe.State.variables[&#39;visit_10&#39;],
-&quot;10a&quot;: harlowe.State.variables[&#39;10a&#39;],
-&quot;10b&quot;: harlowe.State.variables[&#39;10b&#39;],
-&quot;10c&quot;: harlowe.State.variables[&#39;10c&#39;],
-&quot;10d&quot;: harlowe.State.variables[&#39;10d&#39;],
-&quot;visit_11&quot;: harlowe.State.variables[&#39;visit_11&#39;],
-&quot;11a&quot;: harlowe.State.variables[&#39;11a&#39;],
-&quot;11b&quot;: harlowe.State.variables[&#39;11b&#39;],
-&quot;11c&quot;: harlowe.State.variables[&#39;11c&#39;],
-&quot;11d&quot;: harlowe.State.variables[&#39;11d&#39;],
-&quot;visit_12&quot;: harlowe.State.variables[&#39;visit_12&#39;],
-&quot;12a&quot;: harlowe.State.variables[&#39;12a&#39;],
-&quot;12b&quot;: harlowe.State.variables[&#39;12b&#39;],
-&quot;12c&quot;: harlowe.State.variables[&#39;12c&#39;],
-&quot;12d&quot;: harlowe.State.variables[&#39;12d&#39;],
-&quot;visit_13&quot;: harlowe.State.variables[&#39;visit_13&#39;],
-&quot;13a&quot;: harlowe.State.variables[&#39;13a&#39;],
-&quot;13b&quot;: harlowe.State.variables[&#39;13b&#39;],
-&quot;13c&quot;: harlowe.State.variables[&#39;13c&#39;],
-&quot;13d&quot;: harlowe.State.variables[&#39;13d&#39;],
-&quot;visit_14&quot;: harlowe.State.variables[&#39;visit_14&#39;],
-&quot;14a&quot;: harlowe.State.variables[&#39;14a&#39;],
-&quot;14b&quot;: harlowe.State.variables[&#39;14b&#39;],
-&quot;14c&quot;: harlowe.State.variables[&#39;14c&#39;],
-&quot;14d&quot;: harlowe.State.variables[&#39;14d&#39;],
-&quot;visit_15&quot;: harlowe.State.variables[&#39;visit_15&#39;],
-&quot;15a&quot;: harlowe.State.variables[&#39;15a&#39;],
-&quot;15b&quot;: harlowe.State.variables[&#39;15b&#39;],
-&quot;15c&quot;: harlowe.State.variables[&#39;15c&#39;],
-&quot;15d&quot;: harlowe.State.variables[&#39;15d&#39;]
-});
- 
-$.ajax({
-url:&quot;https://script.google.com/macros/s/AKfycbxBGwlEapyxp6fBTVLn_OTey9J5TmoZ2jdwVGAvqUXpR9341RDgkczHQe31aBejLTY/exec&quot;,
-method:&quot;POST&quot;,
-dataType: &quot;json&quot;,
-data: sendData
-}).done(function() {});
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="25" name="postsubmit" tags="" position="700,1000" size="200,100">{
+#</tw-passagedata><tw-passagedata pid="16" name="postsubmit" tags="" position="1500,400" size="200,100">{
 (set: $timestamp to (current-time:))
 (set: $date to (current-date:))
 &lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
@@ -949,7 +646,7 @@ The more feedback I get, the better this project will be! Please consider sharin
 
 (text-style:&quot;wavy-underline&quot;)[//https://kdoesdesign.github.io/ //]
 |==|
-]</tw-passagedata><tw-passagedata pid="26" name="postsurvey" tags="" position="700,1200" size="200,100">//^^tip: all questions are optional, but try to answer as many as you can!^^//
+]</tw-passagedata><tw-passagedata pid="17" name="postsurvey" tags="" position="1500,600" size="200,100">//^^tip: all questions are optional, but try to answer as many as you can!^^//
 
 
 ---
@@ -999,7 +696,7 @@ or: //pitch a movie about yourself— how would it begin and end?//
 Do you have any concerns about how other users might use the site? Do you feel that content moderation might be necessary, or should people be free to say what they want in this space? Do you have any feature suggestions that could help create a safe and inclusive space for all storytellers?
 (input-box:2bind $s_10,&quot;X&quot;)
 
-(text-style:&quot;sway&quot;)[[[SUBMIT →-&gt;postpostsubmit]]]</tw-passagedata><tw-passagedata pid="27" name="intro_1" tags="" position="1000,400" size="100,200">||===
+(text-style:&quot;sway&quot;)[[[SUBMIT →-&gt;postpostsubmit]]]</tw-passagedata><tw-passagedata pid="18" name="intro_1" tags="" position="1000,400" size="100,200">||===
 &#39;&#39;WHAT IS THIS?&#39;&#39;
 Everyone has a story that deserves to be heard!
 
@@ -1013,7 +710,7 @@ Currently, //Stories Apart// is just a concept. With your help, I hope to pitch 
 
 |=
 (after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
-|==|</tw-passagedata><tw-passagedata pid="28" name="intro_2" tags="" position="1200,400" size="100,200">||===
+|==|</tw-passagedata><tw-passagedata pid="19" name="intro_2" tags="" position="1200,400" size="100,200">||===
 &#39;&#39;WHAT IS EXPECTED OF ME?&#39;&#39;
 If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 02 Prototype]!
 
@@ -1036,7 +733,7 @@ There will be an //optional// set of questions at the end of this prototype: thi
 
 |=
 (after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
-|==|</tw-passagedata><tw-passagedata pid="29" name="postpostsubmit" tags="" position="1000,1200" size="200,100">{
+|==|</tw-passagedata><tw-passagedata pid="20" name="postpostsubmit" tags="" position="1800,600" size="200,100">{
 (set: $timestamp to (current-time:))
 (set: $date to (current-date:))
 &lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
@@ -1103,37 +800,26 @@ The more feedback I get, the better this project will be! Please consider sharin
 
 (text-style:&quot;wavy-underline&quot;)[//https://kdoesdesign.github.io/ //]
 |==|
-]</tw-passagedata><tw-passagedata pid="30" name="old_index" tags="" position="1500,325" size="100,100">
+]</tw-passagedata><tw-passagedata pid="21" name="wip" tags="" position="500,400" size="100,100">hello friend! this page is a work in progress
 
+you may enter your email address below, and I&#39;ll let you know when the prototype is live.
+↓ ↓ ↓ ↓
+//(input-box:2bind $contact,&quot;XX=&quot;,&quot; your email here&quot;)//
+^^(link-reveal:&quot;SUBMIT&quot;)[ ✔{
+&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
+&lt;script&gt;
+var sendData = JSON.stringify({
+&quot;contact&quot;: harlowe.State.variables[&#39;contact&#39;]});
+$.ajax({
+url:&quot;https://script.google.com/macros/s/AKfycbymcdFu3WUPBuNyu_2KEjbaPTo9oGs91mMNY7n7fjNGoHYYWw/exec&quot;,
+method:&quot;POST&quot;,
+dataType: &quot;json&quot;,
+data: sendData
+}).done(function() {});
+&lt;/script&gt;
+}]^^
 
-
-
-
-
-
-
-#//welcome, friend!//
-
-
-=|===
-&#39;&#39;WHAT IS THIS?&#39;&#39;
-//Stories Apart// is a space for (text-style:&quot;wavy-underline&quot;)[digital oral storytelling] that encourages personal expression, reducing the scale of a social media platform to foster meaningful interactions in a safe, anonymous, chosen community of storytellers.
-
-This platform will allow users to create (text-style:&quot;wavy-underline&quot;)[campfires] for sharing stories in text or audio format. These campfires may be (text-style:&quot;wavy-underline&quot;)[public] (open to anyone) or (text-style:&quot;wavy-underline&quot;)[private] (invite-only), allowing users to either foster inclusive spaces for anyone, or a safe space for a select community. Anyone who shares a story will be given two (text-style:&quot;wavy-underline&quot;)[keys] to invite others to this campfire, allowing these spaces to naturally grow into a chosen community.
-
-Currently, //Stories Apart// is just a concept. With your help, I hope to pitch this project to a developer so that this concept can become a reality! This pitch will involve a (text-style:&quot;wavy-underline&quot;)[basic prototype] as well as a (text-style:&quot;wavy-underline&quot;)[visual demo] of the site design, using real stories collected during the prototype phase.
-===|=
-&#39;&#39;WHAT IS EXPECTED OF ME?&#39;&#39;
-If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 01 Prototype]!
-
-In this phase, you will //not// be expected to share a story, or any personal information.
-
-If you choose to participate, you will be given a series of story prompts. Your task is to (text-style:&quot;wavy-underline&quot;)[rate each prompt], based on the likelihood that you would share a story in response to the prompt.
-
-There will be an //optional// set of questions at the end of this survey: this will ask for basic demographic information so I can get a better sense of which prompts appeal to which users. There will also be a free space to share ideas and feedback. Again, this information will //not// be required to participate in this phase of the prototype, and your answers will be confidential.
-
-&#39;&#39;(text-style:&quot;sway&quot;)[[LET&#39;S GO →]]&#39;&#39;
-|==|</tw-passagedata><tw-passagedata pid="31" name="LET&#39;S GO →" tags="" position="1425,475" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(text-colour:black)[[[dont click this link unless your name is kayla-&gt;index]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
