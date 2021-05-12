@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Stories_Apart_Prototype_02.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Stories_Apart_Prototype_02" startnode="9" creator="Twine" creator-version="2.3.12" ifid="DA6D4192-4F3C-43DD-BE55-307685C53E02" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
+<tw-storydata name="Stories_Apart_Prototype_02" startnode="1" creator="Twine" creator-version="2.3.12" ifid="DA6D4192-4F3C-43DD-BE55-307685C53E02" zoom="1" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@font-face {
   font-family:"Happy Times at the IKOB New Game Plus Edition";
   src: url("/Fonts/happy-times-NG_regular_master_web.ttf") format("truetype");
   font-weight: normal;
@@ -98,14 +98,15 @@ tw-story {
 	background-size: cover;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.harlowe){
 	window.harlowe = {"State": State};
-}</script><tw-passagedata pid="1" name="index" tags="" position="700,400" size="200,200">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-down&quot;)+(t8n-time:2s)(click-goto:?page,&quot;intro_1&quot;)
+}
+</script><tw-passagedata pid="1" name="index" tags="" position="900,400" size="200,200">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-down&quot;)+(t8n-time:2s)(click-goto:?page,&quot;intro_1&quot;)
 |=
 &lt;img src=&quot;/Images/starburst.gif&quot; width=&quot;50%&quot; align=&quot;right&quot;&gt;
 |||==
 {
 &lt;img src=&quot;/Images/logotype.png&quot; width=&quot;75%&quot;&gt;
 &lt;br&gt;&lt;br&gt;
-^^→ PROTOTYPE&amp;nbsp;PHASE&amp;nbsp;02^^
+→ PROTOTYPE&amp;nbsp;PHASE&amp;nbsp;02
 }
 (after:5s)[=
 (text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]
@@ -163,7 +164,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">|=
+]}</tw-passagedata><tw-passagedata pid="3" name="prompts" tags="" position="700,700" size="200,200">|==
 (t8n: &quot;flicker&quot;)+(t8n-time:3s)[&lt;img src=&quot;/Images/fire.png&quot; width=&quot;100%&quot;&gt;]
 ||||=
 #&#39;&#39;choose a prompt&#39;&#39;
@@ -215,147 +216,7 @@ while you decide, consider:
 
 &#96;*&#96; in response to your feedback from prototype 01, Stories Apart will also include creative prompts about hypothetical situations! in order to make space for serious personal storytelling, these prompts will be a separate option that a campfire moderator can choose to enable. for this prototype campfire, only the personal prompts are available.
 //
-</tw-passagedata><tw-passagedata pid="4" name="postsubmit" tags="" position="400,600" size="200,100">{
-(set: $timestamp to (current-time:))
-(set: $date to (current-date:))
-&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
-&lt;script&gt;
-var sendData = JSON.stringify({
-&quot;timestamp&quot;: harlowe.State.variables[&#39;timestamp&#39;],
-&quot;date&quot;: harlowe.State.variables[&#39;date&#39;],
-&quot;visit_00&quot;: harlowe.State.variables[&#39;visit_00&#39;],
-&quot;00a&quot;: harlowe.State.variables[&#39;00a&#39;],
-&quot;00b&quot;: harlowe.State.variables[&#39;00b&#39;],
-&quot;00c&quot;: harlowe.State.variables[&#39;00c&#39;],
-&quot;00d&quot;: harlowe.State.variables[&#39;00d&#39;],
-&quot;visit_01&quot;: harlowe.State.variables[&#39;visit_01&#39;],
-&quot;01a&quot;: harlowe.State.variables[&#39;01a&#39;],
-&quot;01b&quot;: harlowe.State.variables[&#39;01b&#39;],
-&quot;01c&quot;: harlowe.State.variables[&#39;01c&#39;],
-&quot;01d&quot;: harlowe.State.variables[&#39;01d&#39;],
-&quot;visit_02&quot;: harlowe.State.variables[&#39;visit_02&#39;],
-&quot;02a&quot;: harlowe.State.variables[&#39;02a&#39;],
-&quot;02b&quot;: harlowe.State.variables[&#39;02b&#39;],
-&quot;02c&quot;: harlowe.State.variables[&#39;02c&#39;],
-&quot;02d&quot;: harlowe.State.variables[&#39;02d&#39;],
-&quot;visit_03&quot;: harlowe.State.variables[&#39;visit_03&#39;],
-&quot;03a&quot;: harlowe.State.variables[&#39;03a&#39;],
-&quot;03b&quot;: harlowe.State.variables[&#39;03b&#39;],
-&quot;03c&quot;: harlowe.State.variables[&#39;03c&#39;],
-&quot;03d&quot;: harlowe.State.variables[&#39;03d&#39;],
-&quot;visit_04&quot;: harlowe.State.variables[&#39;visit_04&#39;],
-&quot;04a&quot;: harlowe.State.variables[&#39;04a&#39;],
-&quot;04b&quot;: harlowe.State.variables[&#39;04b&#39;],
-&quot;04c&quot;: harlowe.State.variables[&#39;04c&#39;],
-&quot;04d&quot;: harlowe.State.variables[&#39;04d&#39;],
-&quot;visit_05&quot;: harlowe.State.variables[&#39;visit_05&#39;],
-&quot;05a&quot;: harlowe.State.variables[&#39;05a&#39;],
-&quot;05b&quot;: harlowe.State.variables[&#39;05b&#39;],
-&quot;05c&quot;: harlowe.State.variables[&#39;05c&#39;],
-&quot;05d&quot;: harlowe.State.variables[&#39;05d&#39;],
-&quot;visit_06&quot;: harlowe.State.variables[&#39;visit_06&#39;],
-&quot;06a&quot;: harlowe.State.variables[&#39;06a&#39;],
-&quot;06b&quot;: harlowe.State.variables[&#39;06b&#39;],
-&quot;06c&quot;: harlowe.State.variables[&#39;06c&#39;],
-&quot;06d&quot;: harlowe.State.variables[&#39;06d&#39;],
-&quot;visit_07&quot;: harlowe.State.variables[&#39;visit_07&#39;],
-&quot;07a&quot;: harlowe.State.variables[&#39;07a&#39;],
-&quot;07b&quot;: harlowe.State.variables[&#39;07b&#39;],
-&quot;07c&quot;: harlowe.State.variables[&#39;07c&#39;],
-&quot;07d&quot;: harlowe.State.variables[&#39;07d&#39;],
-&quot;visit_08&quot;: harlowe.State.variables[&#39;visit_08&#39;],
-&quot;08a&quot;: harlowe.State.variables[&#39;08a&#39;],
-&quot;08b&quot;: harlowe.State.variables[&#39;08b&#39;],
-&quot;08c&quot;: harlowe.State.variables[&#39;08c&#39;],
-&quot;08d&quot;: harlowe.State.variables[&#39;08d&#39;],
-&quot;visit_09&quot;: harlowe.State.variables[&#39;visit_09&#39;],
-&quot;09a&quot;: harlowe.State.variables[&#39;09a&#39;],
-&quot;09b&quot;: harlowe.State.variables[&#39;09b&#39;],
-&quot;09c&quot;: harlowe.State.variables[&#39;09c&#39;],
-&quot;09d&quot;: harlowe.State.variables[&#39;09d&#39;],
-&quot;visit_10&quot;: harlowe.State.variables[&#39;visit_10&#39;],
-&quot;10a&quot;: harlowe.State.variables[&#39;10a&#39;],
-&quot;10b&quot;: harlowe.State.variables[&#39;10b&#39;],
-&quot;10c&quot;: harlowe.State.variables[&#39;10c&#39;],
-&quot;10d&quot;: harlowe.State.variables[&#39;10d&#39;],
-&quot;visit_11&quot;: harlowe.State.variables[&#39;visit_11&#39;],
-&quot;11a&quot;: harlowe.State.variables[&#39;11a&#39;],
-&quot;11b&quot;: harlowe.State.variables[&#39;11b&#39;],
-&quot;11c&quot;: harlowe.State.variables[&#39;11c&#39;],
-&quot;11d&quot;: harlowe.State.variables[&#39;11d&#39;],
-&quot;visit_12&quot;: harlowe.State.variables[&#39;visit_12&#39;],
-&quot;12a&quot;: harlowe.State.variables[&#39;12a&#39;],
-&quot;12b&quot;: harlowe.State.variables[&#39;12b&#39;],
-&quot;12c&quot;: harlowe.State.variables[&#39;12c&#39;],
-&quot;12d&quot;: harlowe.State.variables[&#39;12d&#39;],
-&quot;visit_13&quot;: harlowe.State.variables[&#39;visit_13&#39;],
-&quot;13a&quot;: harlowe.State.variables[&#39;13a&#39;],
-&quot;13b&quot;: harlowe.State.variables[&#39;13b&#39;],
-&quot;13c&quot;: harlowe.State.variables[&#39;13c&#39;],
-&quot;13d&quot;: harlowe.State.variables[&#39;13d&#39;],
-&quot;visit_14&quot;: harlowe.State.variables[&#39;visit_14&#39;],
-&quot;14a&quot;: harlowe.State.variables[&#39;14a&#39;],
-&quot;14b&quot;: harlowe.State.variables[&#39;14b&#39;],
-&quot;14c&quot;: harlowe.State.variables[&#39;14c&#39;],
-&quot;14d&quot;: harlowe.State.variables[&#39;14d&#39;],
-&quot;visit_15&quot;: harlowe.State.variables[&#39;visit_15&#39;],
-&quot;15a&quot;: harlowe.State.variables[&#39;15a&#39;],
-&quot;15b&quot;: harlowe.State.variables[&#39;15b&#39;],
-&quot;15c&quot;: harlowe.State.variables[&#39;15c&#39;],
-&quot;15d&quot;: harlowe.State.variables[&#39;15d&#39;]
-});
- 
-$.ajax({
-url:&quot;https://script.google.com/macros/s/AKfycbxBGwlEapyxp6fBTVLn_OTey9J5TmoZ2jdwVGAvqUXpR9341RDgkczHQe31aBejLTY/exec&quot;,
-method:&quot;POST&quot;,
-dataType: &quot;json&quot;,
-data: sendData
-}).done(function() {});
-&lt;/script&gt;}
-Just a moment, your data is being sent into space...
-(event: when time &gt; 5s)[Done! Your response has been recorded.]
-#(after:1s)[.] (after:2s)[.] (after:3s)[.] (after:4s)[.] (after:5s)[✔]
-
-(after:8s)[
----
-Thank you for sharing your thoughts! ❤
-Collecting feedback from a large and diverse audience will help me make //Stories Apart// as inclusive and user-friendly as possible.
-
-If you have some extra time to spare, here are some other ways you can help this project grow:
-
-
-&#39;&#39;COMPLETE A FOLLOW-UP SURVEY&#39;&#39;
-I would love to hear what you think about this project! This optional survey will ask for basic demographic information, your thoughts about //Stories Apart//, and any suggestions you have to improve the project.
-(text-style:&quot;sway&quot;)[[[BEGIN →-&gt;postsurvey]]]
-
-
-|=
-&#39;&#39;VOLUNTEER FOR PROTOTYPE PHASE 2&#39;&#39;
-Have a story to share? In the next phase of the prototype, I will be collecting audio stories in response to these prompts! These will become part of the //Stories Apart// archive, a proof-of-concept for how the web app will function.
-
-If you would like to participate, put your email address in the field below! A link will be sent to you when phase 2 is ready.
-
-//(input-box:2bind $contact,&quot;XX=&quot;,&quot; your email here&quot;)//
-^^(link-reveal:&quot;SUBMIT&quot;)[ ✔{
-&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
-&lt;script&gt;
-var sendData = JSON.stringify({
-&quot;contact&quot;: harlowe.State.variables[&#39;contact&#39;]});
-$.ajax({
-url:&quot;https://script.google.com/macros/s/AKfycbymcdFu3WUPBuNyu_2KEjbaPTo9oGs91mMNY7n7fjNGoHYYWw/exec&quot;,
-method:&quot;POST&quot;,
-dataType: &quot;json&quot;,
-data: sendData
-}).done(function() {});
-&lt;/script&gt;
-}]^^
-=|
-&#39;&#39;SHARE THIS LINK WITH OTHERS&#39;&#39;
-The more feedback I get, the better this project will be! Please consider sharing this link over social media, or sending it directly to a friend who has time to kill.
-
-(text-style:&quot;wavy-underline&quot;)[//https://kdoesdesign.github.io/ //]
-|==|
-]</tw-passagedata><tw-passagedata pid="5" name="postsurvey" tags="" position="400,800" size="200,100">//^^tip: all questions are optional, but try to answer as many as you can!^^//
+</tw-passagedata><tw-passagedata pid="4" name="postsurvey" tags="" position="1600,400" size="100,200">//^^tip: all questions are optional, but try to answer as many as you can!^^//
 
 
 ---
@@ -363,20 +224,21 @@ The more feedback I get, the better this project will be! Please consider sharin
 
 |===
 How old are you?
-(input-box:2bind $s_01,&quot;X&quot;)
+(input-box:2bind $s_01,&quot;X&quot;,1)
 
 Would you describe yourself as BIPOC? (black, indigenous and/or person of color)&#96;*&#96;
 (dropdown: 2bind $s_02,&quot;--&quot;,&quot;Yes&quot;,&quot;No&quot;)
 |=
 What are your preferred pronouns?&#96;*&#96;
-(input-box:2bind $s_03,&quot;X&quot;)
+(input-box:2bind $s_03,&quot;X&quot;,1)
+
 
 Do you identify as LGBTQIA+? (lesbian, gay, bisexual, transgender, queer, intersex, and/or asexual)
 (dropdown: 2bind $s_04,&quot;--&quot;,&quot;Yes&quot;,&quot;No&quot;)
 |==|
 
 Is there anything else about your identity, affiliations, background, or lived experiences that may be relevant to the stories you have to share?
-^^&#96;*&#96; if you answered &quot;yes&quot; to either question, feel free to specify your BIPOC / LGBTQIA+ identity in this space^^
+^^&#96;*&#96; if you answered &quot;yes&quot; to either question, you may elaborate on your answer here^^
 (input-box:2bind $s_05,&quot;X&quot;)
 
 
@@ -387,62 +249,21 @@ How do you feel about the //Stories Apart// concept? Is this a website you would
 (input-box:2bind $s_06,&quot;X&quot;)
 
 |===
-Would you prefer to submit a story in audio (spoken word) or text format?
-(dropdown: 2bind $s_07,&quot;--&quot;,&quot;Audio&quot;,&quot;Text&quot;)
+Would you be interested in replying to other user stories via text/audio comments? or would you rather just listen to them?
+(dropdown: 2bind $s_07,&quot;--&quot;,&quot;Reply&quot;,&quot;Just listen&quot;)
 |=
 Would you be interested in creating your own campfire? or would you rather submit a story and leave?
 (dropdown: 2bind $s_08,&quot;--&quot;,&quot;Campfire&quot;,&quot;Just story&quot;)
 |==|
 
-All of the prompts ask about (text-style:&quot;wavy-underline&quot;)[real lived experiences]. However, some of these real-life experiences can be difficult to share with an online public.
-
-Do you think it&#39;s important to have a space to share real, impactful experiences? Or would you show more interest in (text-style:&quot;wavy-underline&quot;)[hypothetical story prompts] that allow more creativity?
-For example: //describe your ideal road trip//
-or: //pitch a movie about yourself— how would it begin and end?//
-^^feel free to use this space to pitch your own prompt ideas!^^
+In the previous prototype survey, several users expressed interest in creative hypothetical prompts, in addition to the current prompts based on lived experiences. What other prompts would you like to see included?
 (input-box:2bind $s_09,&quot;X&quot;)
 
-Do you have any concerns about how other users might use the site? Do you feel that content moderation might be necessary, or should people be free to say what they want in this space? Do you have any feature suggestions that could help create a safe and inclusive space for all storytellers?
+Do you have any feature suggestions that could help create a safe and inclusive space for all storytellers? Other users have suggested content tags / content warnings for stories, and a report function.
 (input-box:2bind $s_10,&quot;X&quot;)
 
-(text-style:&quot;sway&quot;)[[[SUBMIT →-&gt;postpostsubmit]]]</tw-passagedata><tw-passagedata pid="6" name="intro_1" tags="" position="1000,400" size="100,200">||===
-&#39;&#39;WHAT IS THIS?&#39;&#39;
-Everyone has a story that deserves to be heard!
-
-//Stories Apart// is a space for (text-style:&quot;wavy-underline&quot;)[digital oral storytelling] that encourages personal expression. It aims to bring the intimate experience of communal storytelling to the web, fostering meaningful interactions in a safe, anonymous, chosen community of storytellers.(after:2.1s)[=
-(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-This platform will allow users to create (text-style:&quot;wavy-underline&quot;)[campfires] for sharing stories in text or audio format. These campfires may be (text-style:&quot;wavy-underline&quot;)[public] (open to anyone) or (text-style:&quot;wavy-underline&quot;)[private] (invite-only), allowing users to either foster inclusive spaces for anyone, or a safe space for a select group.
-(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-Currently, //Stories Apart// is just a concept. With your help, I hope to pitch this project to a developer so that this concept can become a reality! This pitch will involve a (text-style:&quot;wavy-underline&quot;)[functional prototype], a (text-style:&quot;wavy-underline&quot;)[visual mockup] of the site design, and an (text-style:&quot;wavy-underline&quot;)[archive of stories] collected during this prototype phase.
-
-(text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[&#39;&#39;HERE&#39;S WHERE YOU COME IN →&#39;&#39;-&gt;intro_2]]
-
-|=
-(after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
-|==|</tw-passagedata><tw-passagedata pid="7" name="intro_2" tags="" position="1200,400" size="100,200">||===
-&#39;&#39;WHAT IS EXPECTED OF ME?&#39;&#39;
-If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 02 Prototype]!
-
-In this phase, you will be asked to share a story in response to a prompt of your choice! Your story will be added to the //Stories Apart// archive: a proof-of-concept showing how a single campfire can grow, and what kind of stories people would share on this platform.
-(after:2.1s)[=
-(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-Your story may be recorded in text or audio format. Your submission will be anonymous, and you will not be required to share your name or any personal information!
-
-However, please note that your submission will be publicly accessible by visitors of the //Stories Apart// archive. &#39;&#39;By participating, you are consenting to have the contents of your story stored on a database and shared online.&#39;&#39;
-
-(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
-There will be an //optional// set of questions at the end of this prototype: this will ask for basic demographic information. There will also be a free space to share ideas and feedback. Again, this information will //not// be required to participate in this phase of the prototype, and your answers will be not be tracable to the story you submit.
-(set: $consent to false)
-(checkbox: 2bind $consent,&quot; I understand and wish to continue&quot;)
-{(live: 0.5s)[
-(if:$consent is true)[
-&#39;&#39;(text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[LET&#39;S GO! →-&gt;prompts]]&#39;&#39;
-]]}
-
-
-|=
-(after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
-|==|</tw-passagedata><tw-passagedata pid="8" name="postpostsubmit" tags="" position="400,1000" size="200,100">{
+(link: &quot;SUBMIT →&quot;)[=
+{
 (set: $timestamp to (current-time:))
 (set: $date to (current-date:))
 &lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
@@ -469,47 +290,44 @@ dataType: &quot;json&quot;,
 data: sendData
 }).done(function() {});
 &lt;/script&gt;}
+(go-to: &quot;audiosubmit&quot;)</tw-passagedata><tw-passagedata pid="5" name="intro_1" tags="" position="1200,400" size="100,200">||===
+&#39;&#39;WHAT IS THIS?&#39;&#39;
+Everyone has a story that deserves to be heard!
 
-Just a moment, your data is being sent into space...
-(event: when time &gt; 5s)[Done! Your response has been recorded.]
-#(after:1s)[.] (after:2s)[.] (after:3s)[.] (after:4s)[.] (after:5s)[✔]
+//Stories Apart// is a space for (text-style:&quot;wavy-underline&quot;)[digital oral storytelling] that encourages personal expression. It aims to bring the intimate experience of communal storytelling to the web, fostering meaningful interactions in a safe, anonymous, chosen community of storytellers.(after:2.1s)[=
+(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
+This platform will allow users to create (text-style:&quot;wavy-underline&quot;)[campfires] for sharing stories in text or audio format. These campfires may be (text-style:&quot;wavy-underline&quot;)[public] (open to anyone) or (text-style:&quot;wavy-underline&quot;)[private] (invite-only), allowing users to either foster inclusive spaces for anyone, or a safe space for a select group.
+(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
+Currently, //Stories Apart// is just a concept. With your help, I hope to pitch this project to a developer so that this concept can become a reality! This pitch will involve a (text-style:&quot;wavy-underline&quot;)[functional prototype], a (text-style:&quot;wavy-underline&quot;)[visual mockup] of the site design, and an (text-style:&quot;wavy-underline&quot;)[archive of stories] collected during this prototype phase.
 
-(after:8s)[
----
-Thank you for sharing your thoughts! ❤
-Collecting feedback from a large and diverse audience will help me make //Stories Apart// as inclusive and user-friendly as possible.
+(text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[&#39;&#39;HERE&#39;S WHERE YOU COME IN →&#39;&#39;-&gt;intro_2]]
 
-Thank you for participating in the follow up survey!
-Here are some other ways you can help this project grow:
+|=
+(after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
+|==|</tw-passagedata><tw-passagedata pid="6" name="intro_2" tags="" position="1400,400" size="100,200">||===
+&#39;&#39;WHAT IS EXPECTED OF ME?&#39;&#39;
+If you have received this link, you are invited to participate in the (text-style:&quot;wavy-underline&quot;)[Phase 02 Prototype]!
+
+In this phase, you will be asked to share a story in response to a prompt of your choice! Your story will be added to the //Stories Apart// archive: a proof-of-concept showing how a single campfire can grow, and what kind of stories people would share on this platform.
+(after:2.1s)[=
+(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
+Your story may be recorded in text or audio format. Your submission will be anonymous, and you will not be required to share your name or any personal information!
+
+However, please note that your submission will be publicly accessible by visitors of the //Stories Apart// archive. &#39;&#39;By participating, you are consenting to have the contents of your story stored on a database and shared online.&#39;&#39;
+
+(click:?page)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[=
+There will be an //optional// set of questions at the end of this prototype: this will ask for basic demographic information. There will also be a free space to share ideas and feedback. Again, this information will //not// be required to participate in this phase of the prototype, and your answers will be not be tracable to the story you submit.
+(set: $consent to false)
+(checkbox: 2bind $consent,&quot; I understand and wish to continue&quot;)
+{(live: 0.5s)[
+(if:$consent is true)[
+&#39;&#39;(text-style:&quot;sway&quot;)+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;slide-up&quot;)+(t8n-time:2s)[[LET&#39;S GO! →-&gt;prompts]]&#39;&#39;
+]]}
 
 
 |=
-&#39;&#39;VOLUNTEER FOR PROTOTYPE PHASE 2&#39;&#39;
-Have a story to share? In the next phase of the prototype, I will be collecting audio stories in response to these prompts! These will become part of the //Stories Apart// archive, a proof-of-concept for how the web app will function.
-
-If you would like to participate, put your email address in the field below! A link will be sent to you when phase 2 is ready.
-
-//(input-box:2bind $contact,&quot;XX=&quot;,&quot; your email here&quot;)//
-^^(link-reveal:&quot;SUBMIT&quot;)[ ✔{
-&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
-&lt;script&gt;
-var sendData = JSON.stringify({
-&quot;contact&quot;: harlowe.State.variables[&#39;contact&#39;]});
-$.ajax({
-url:&quot;https://script.google.com/macros/s/AKfycbymcdFu3WUPBuNyu_2KEjbaPTo9oGs91mMNY7n7fjNGoHYYWw/exec&quot;,
-method:&quot;POST&quot;,
-dataType: &quot;json&quot;,
-data: sendData
-}).done(function() {});
-&lt;/script&gt;
-}]^^
-=|
-&#39;&#39;SHARE THIS LINK WITH OTHERS&#39;&#39;
-The more feedback I get, the better this project will be! Please consider sharing this link over social media, or sending it directly to a friend who has time to kill.
-
-(text-style:&quot;wavy-underline&quot;)[//https://kdoesdesign.github.io/ //]
-|==|
-]</tw-passagedata><tw-passagedata pid="9" name="wip" tags="" position="500,400" size="100,100">hello friend! this page is a work in progress
+(after:5s)[(text-style:&quot;fade-in-out&quot;)[^^//tip: click anywhere to continue//^^]]
+|==|</tw-passagedata><tw-passagedata pid="7" name="wip" tags="" position="700,400" size="100,100">hello friend! this page is a work in progress
 
 you may enter your email address below, and I&#39;ll let you know when the prototype is live.
 ↓ ↓ ↓ ↓
@@ -528,7 +346,7 @@ data: sendData
 &lt;/script&gt;
 }]^^
 
-(text-colour:black)[[[dont click this link unless your name is kayla-&gt;index]]]</tw-passagedata><tw-passagedata pid="10" name="textsubmit" tags="" position="1500,700" size="200,100">{
+(text-colour:black)[[[dont click this link unless your name is kayla-&gt;index]]]</tw-passagedata><tw-passagedata pid="8" name="textsubmit" tags="" position="1500,700" size="200,100">{
 (set: $timestamp to (current-time:))
 (set: $date to (current-date:))
 &lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
@@ -553,8 +371,83 @@ Just a moment, your data is being sent into space...
 
 (after:8s)[=
 ---
-Thank you for sharing your story! ❤
-Collecting feedback from a large and diverse audience will help me make //Stories Apart// as inclusive and user-friendly as possible.</tw-passagedata><tw-passagedata pid="11" name="audiosubmit" tags="" position="1500,900" size="200,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="01" tags="" position="1100,700" size="100,100">{(set: $prompt to &quot;share a moment that made you feel loved, seen, appreciated&quot;)
+Thank you for sharing your story!  (text-style:&quot;fidget&quot;)+(text-colour:#8D47FF)[❤]
+
+Your participation means the world to me! Each story you submit makes my vision for //Stories Apart// one step closer to becoming a reality. I can&#39;t wait to listen to your stories, and to watch this first ever online campfire grow.
+
+
+Here are some other ways you can help!
+
+|==
+&#39;&#39;SHARING IS CARING&#39;&#39;
+Please consider sending this link to friends, family, followers, anyone who might have a story of their own to share:
+
+(input-box:&quot;X&quot;,1,&quot;kdoesdesign.github.io/&quot;)
+|=
+&#39;&#39;STAY IN THE LOOP&#39;&#39;
+Want to be the first to know about future updates to this project? Enter your email address below, and I&#39;ll keep you posted:
+
+//(input-box:2bind $contact,&quot;X&quot;, 1, &quot;your email here&quot;)//
+^^(link-reveal:&quot;SUBMIT&quot;)[ ✔ {
+&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
+&lt;script&gt;
+var sendData = JSON.stringify({
+&quot;contact&quot;: harlowe.State.variables[&#39;contact&#39;]});
+$.ajax({
+url:&quot;https://script.google.com/macros/s/AKfycbymcdFu3WUPBuNyu_2KEjbaPTo9oGs91mMNY7n7fjNGoHYYWw/exec&quot;,
+method:&quot;POST&quot;,
+dataType: &quot;json&quot;,
+data: sendData
+}).done(function() {});
+&lt;/script&gt;}
+] ^^
+|==|
+
+&#39;&#39;SHARE YOUR THOUGHTS&#39;&#39;
+I would love to hear what you think about this project! This optional survey will ask for basic demographic information, your thoughts about //Stories Apart//, and any suggestions you have to improve the project.
+(text-style:&quot;sway&quot;)[[[BEGIN →-&gt;postsurvey]]]
+
+(text-colour:#aaf)+(link-rerun: &quot;a project by kayla&quot;)[(open-url: &quot;http://kdoes.design&quot;)]</tw-passagedata><tw-passagedata pid="9" name="audiosubmit" tags="" position="1500,900" size="200,100">Thank you for sharing your story!  (text-style:&quot;fidget&quot;)+(text-colour:#8D47FF)[❤]
+
+Your participation means the world to me! Each story you submit makes my vision for //Stories Apart// one step closer to becoming a reality. I can&#39;t wait to listen to your stories, and to watch this first ever online campfire grow.
+
+
+Here are some other ways you can help!
+
+|==
+&#39;&#39;SHARING IS CARING&#39;&#39;
+Please consider sending this link to friends, family, followers, anyone who might have a story of their own to share:
+
+(input-box:&quot;X&quot;,1,&quot;kdoesdesign.github.io/&quot;)
+|=
+&#39;&#39;STAY IN THE LOOP&#39;&#39;
+Want to be the first to know about future updates to this project? Enter your email address below, and I&#39;ll keep you posted:
+
+//(input-box:2bind $contact,&quot;X&quot;, 1, &quot;your email here&quot;)//
+^^(link-reveal:&quot;SUBMIT&quot;)[ ✔ {
+&lt;script src=”jquery-3.3.1.min.js”&gt;&lt;/script&gt;
+&lt;script&gt;
+var sendData = JSON.stringify({
+&quot;contact&quot;: harlowe.State.variables[&#39;contact&#39;]});
+$.ajax({
+url:&quot;https://script.google.com/macros/s/AKfycbymcdFu3WUPBuNyu_2KEjbaPTo9oGs91mMNY7n7fjNGoHYYWw/exec&quot;,
+method:&quot;POST&quot;,
+dataType: &quot;json&quot;,
+data: sendData
+}).done(function() {});
+&lt;/script&gt;}
+] ^^
+|==|
+
+&#39;&#39;SHARE YOUR THOUGHTS&#39;&#39;
+I would love to hear what you think about this project! This optional survey will ask for basic demographic information, your thoughts about //Stories Apart//, and any suggestions you have to improve the project.
+(text-style:&quot;sway&quot;)[[[BEGIN →-&gt;postsurvey]]]
+
+
+&#39;&#39;JOIN THE SONGS APART MIXTAPE&#39;&#39;
+What music makes you feel creative? Join the (link-rerun:&quot;collaborative playlist on Spotify&quot;)[(open-url: &quot;https://open.spotify.com/playlist/0QNvWraVKJLWPBIsdM1LqG&quot;)] to add your own songs to pass around the campfire.
+
+(text-colour:#aaf)+(link-rerun: &quot;a project by kayla&quot;)[(open-url: &quot;http://kdoes.design&quot;)]</tw-passagedata><tw-passagedata pid="10" name="01" tags="" position="1100,700" size="100,100">{(set: $prompt to &quot;share a moment that made you feel loved, seen, appreciated&quot;)
 
 }
 |||=
@@ -608,7 +501,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="13" name="02" tags="" position="1200,700" size="100,100">{(set: $prompt to &quot;share an experience in which you felt afraid, at risk, targeted&quot;)
+]}</tw-passagedata><tw-passagedata pid="11" name="02" tags="" position="1200,700" size="100,100">{(set: $prompt to &quot;share an experience in which you felt afraid, at risk, targeted&quot;)
 
 }
 |||=
@@ -662,7 +555,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="14" name="03" tags="" position="1300,700" size="100,100">{(set: $prompt to &quot;share a pleasant, funny memory that you love to recall&quot;)
+]}</tw-passagedata><tw-passagedata pid="12" name="03" tags="" position="1300,700" size="100,100">{(set: $prompt to &quot;share a pleasant, funny memory that you love to recall&quot;)
 
 }
 |||=
@@ -716,7 +609,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="15" name="04" tags="" position="1000,800" size="100,100">{(set: $prompt to &quot;share a dream that you can remember vividly&quot;)
+]}</tw-passagedata><tw-passagedata pid="13" name="04" tags="" position="1000,800" size="100,100">{(set: $prompt to &quot;share a dream that you can remember vividly&quot;)
 
 }
 |||=
@@ -770,7 +663,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="16" name="05" tags="" position="1100,800" size="100,100">{(set: $prompt to &quot;share a hobby, activity, fandom, interest that you are passionate about&quot;)
+]}</tw-passagedata><tw-passagedata pid="14" name="05" tags="" position="1100,800" size="100,100">{(set: $prompt to &quot;share a hobby, activity, fandom, interest that you are passionate about&quot;)
 
 }
 |||=
@@ -824,7 +717,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="17" name="06" tags="" position="1200,800" size="100,100">{(set: $prompt to &quot;share your experience with a community where you feel a sense of belonging&quot;)
+]}</tw-passagedata><tw-passagedata pid="15" name="06" tags="" position="1200,800" size="100,100">{(set: $prompt to &quot;share your experience with a community where you feel a sense of belonging&quot;)
 
 }
 |||=
@@ -878,7 +771,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="18" name="07" tags="" position="1300,800" size="100,100">{(set: $prompt to &quot;share an awkward memory that still makes you cringe (but maybe is funny in hindsight)&quot;)
+]}</tw-passagedata><tw-passagedata pid="16" name="07" tags="" position="1300,800" size="100,100">{(set: $prompt to &quot;share an awkward memory that still makes you cringe (but maybe is funny in hindsight)&quot;)
 
 }
 |||=
@@ -932,7 +825,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="19" name="09" tags="" position="1000,900" size="100,100">{(set: $prompt to &quot;share an accomplishment, creation, or goal that you are proud of, or a hardship that you have overcome&quot;)
+]}</tw-passagedata><tw-passagedata pid="17" name="09" tags="" position="1000,900" size="100,100">{(set: $prompt to &quot;share an accomplishment, creation, or goal that you are proud of, or a hardship that you have overcome&quot;)
 
 }
 |||=
@@ -986,7 +879,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="20" name="10" tags="" position="1100,900" size="100,100">{(set: $prompt to &quot;share a description of the place you grew up in&quot;)
+]}</tw-passagedata><tw-passagedata pid="18" name="10" tags="" position="1100,900" size="100,100">{(set: $prompt to &quot;share a description of the place you grew up in&quot;)
 
 }
 |||=
@@ -1040,7 +933,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="21" name="11" tags="" position="1200,900" size="100,100">{(set: $prompt to &quot;share a piece of information that changed your beliefs, opinions, worldview&quot;)
+]}</tw-passagedata><tw-passagedata pid="19" name="11" tags="" position="1200,900" size="100,100">{(set: $prompt to &quot;share a piece of information that changed your beliefs, opinions, worldview&quot;)
 
 }
 |||=
@@ -1094,7 +987,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="22" name="12" tags="" position="1300,900" size="100,100">{(set: $prompt to &quot;share something that you love about yourself&quot;)
+]}</tw-passagedata><tw-passagedata pid="20" name="12" tags="" position="1300,900" size="100,100">{(set: $prompt to &quot;share something that you love about yourself&quot;)
 
 }
 |||=
@@ -1148,7 +1041,7 @@ Need some good music to get your creative brain cells firing? (link:&quot;Join t
 
 (if:$storytype is &quot;Actually, I want to pick a different prompt&quot;)[
 (go-to: &quot;prompts&quot;)
-]}</tw-passagedata><tw-passagedata pid="23" name="08" tags="" position="1400,800" size="100,100">{(set: $prompt to &quot;share something that you wish others understood about you, or something that has made you feel marginalized&quot;)
+]}</tw-passagedata><tw-passagedata pid="21" name="08" tags="" position="1400,800" size="100,100">{(set: $prompt to &quot;share something that you wish others understood about you, or something that has made you feel marginalized&quot;)
 
 }
 |||=
